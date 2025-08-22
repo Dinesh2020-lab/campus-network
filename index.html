@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Campus Network Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/konva@8.4.3/konva.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h2>Smart Campus Network Visualizer</h2>
+      <div class="toolbar">
+        <button id="add-server">➕ Server</button>
+        <button id="add-switch">➕ Switch</button>
+        <button id="add-ap">➕ AP</button>
+        <button id="link-mode">🔗 Link Mode</button>
+        <button id="simulate">▶ Simulate</button>
+        <button id="clear" class="danger">🧹 Clear</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <div class="left-panel">
+        <h3>Buildings</h3>
+        <div class="building-list">
+          <button class="preset-building" data-name="CSC">🏫 CSC</button>
+          <button class="preset-building" data-name="ECE">🏫 ECE</button>
+          <button class="preset-building" data-name="Mechanical">🏫 Mechanical</button>
+          <button class="preset-building" data-name="Library">📚 Library</button>
+          <button class="preset-building" data-name="Civil">🏫 Civil</button>
+        </div>
+        <h3>Legend</h3>
+        <ul>
+          <li>🏫 Building</li>
+          <li>🖥 Server</li>
+          <li>🔀 Switch</li>
+          <li>📶 Access Point</li>
+        </ul>
+      </div>
+      <div class="canvas-wrap">
+        <div id="container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
